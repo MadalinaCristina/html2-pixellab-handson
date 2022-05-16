@@ -43,6 +43,10 @@ body > h1 {
   .box-1 {
     display: none;
   }
+
+  body {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -58,6 +62,11 @@ body > h1 {
 @media (max-width: 992px) {
   .box-4 {
     display: none;
+  }
+
+  .box-2 {
+    border-color: yellow;
+    color: white;
   }
 }
 
@@ -84,5 +93,11 @@ body > h1 {
 @media (min-width: 600px) and (max-width: 1200px) {
   body > h1 {
     display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  body > h3 {
+    color: red;
   }
 }
