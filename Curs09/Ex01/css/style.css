@@ -53,4 +53,29 @@
   align-items: flex-end;
 }
 
+.flex-container-01 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
 
+.flex-container-02 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.flex-container-04 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-container-06 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
