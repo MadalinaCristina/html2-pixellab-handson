@@ -17,9 +17,387 @@
     rel="stylesheet"
     href="https://pixellab.ro/js/pixeltab/static/js/pixeltab.css"
   >
+
+  <!-- CSS only -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"
+  >
 </head>
 
 <body>
+
+  <form>
+    <header class="container mb-4">
+      <h1 class="text-center text-lg-start">Formular Produs</h1>
+    </header>
+
+    <main class="container mb-5">
+      <fieldset class="mb-2">
+        <header>
+          <h2>Produs</h2>
+
+          <section class="row">
+            <div class="col-12 col-lg-6">
+              <div class="mb-2 mb-lg-5">
+                <label
+                  for="recipe-image"
+                  class="form-label d-block"
+                >Imagine principala *</label>
+
+                <input
+                  type="file"
+                  name="recipe-image"
+                  id="recipe-image"
+                  class="form-control"
+                  required
+                >
+              </div>
+
+              <div class="input-group mb-2">
+                <label
+                  for="category"
+                  class="input-group-text"
+                >Categorie *</label>
+
+                <select
+                  name="category"
+                  id="category"
+                  class="form-select"
+                >
+                  <option value="">--categorie--</option>
+                  <option value="1">Carne</option>
+                  <option value="2">Lactate</option>
+                </select>
+              </div>
+
+              <div class="input-group mb-2">
+                <label
+                  for="brand-name"
+                  class="input-group-text"
+                >Brand</label>
+
+                <select
+                  name="brand-name"
+                  id="brand-name"
+                  class="form-select"
+                >
+                  <option value="">--brand--</option>
+                  <option value="1">Vanbet</option>
+                  <option value="2">Albalact</option>
+                </select>
+              </div>
+
+              <div class="input-group mb-2">
+                <label
+                  for="supplier-name"
+                  class="input-group-text"
+                >Furnizor</label>
+
+                <select
+                  name="supplier-name"
+                  id="supplier-name"
+                  class="form-select"
+                >
+                  <option value="">--furnizor--</option>
+                  <option value="1">Vanbet SRL</option>
+                  <option value="2">Albalact SRL</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6 mt-0 mt-lg-0">
+              <div class="input-group mb-2">
+                <label
+                  for="product-name"
+                  class="input-group-text"
+                >Numele produsului *</label>
+
+                <input
+                  type="text"
+                  name="product-name"
+                  class="form-control"
+                  id="product-name"
+                  placeholder="Numele produsului *"
+                  required
+                >
+              </div>
+
+              <div class="input-group mb-2">
+                <label
+                  for="product-long-description"
+                  class="input-group-text"
+                >Descriere lunga *</label>
+
+                <textarea
+                  name="product-long-description"
+                  id="product-long-description"
+                  class="form-control"
+                  cols="30"
+                  rows="8"
+                  placeholder="Descriere lunga *"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="input-group">
+                <label
+                  for="product-short-description"
+                  class="input-group-text"
+                >Descriere scurta *</label>
+
+                <textarea
+                  name="product-short-description"
+                  id="product-short-description"
+                  class="form-control"
+                  cols="30"
+                  rows="4"
+                  placeholder="Descriere scurta *"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </section>
+        </header>
+      </fieldset>
+
+      <fieldset class="mb-2">
+        <header>
+          <h2>Pret</h2>
+        </header>
+
+        <section class="row">
+          <div class="col-12 mb-2">
+            <div class="form-check">
+              <input
+                type="checkbox"
+                name="product-offer"
+                id="product-offer"
+                class="form-check-input"
+              >
+
+              <label for="product-offer">Afiseaza oferta pe produs</label>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 mb-2 mb-lg-0">
+            <div class="input-group">
+              <label
+                for="product-price"
+                class="input-group-text"
+              >Pret *</label>
+
+              <input
+                type="text"
+                name="product-price"
+                id="product-price"
+                class="form-control"
+                placeholder="Pret *"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="form-check mb-2">
+              <input
+                type="checkbox"
+                name="sales"
+                id="sales"
+                class="form-check-input"
+              >
+
+              <label for="sales">Afiseaza pret redus</label>
+            </div>
+
+            <div class="input-group">
+              <label
+                for="reduced-price"
+                class="input-group-text"
+              >Pret redus</label>
+
+              <input
+                type="text"
+                name="reduced-price"
+                id="reduced-price"
+                class="form-control"
+                placeholder="Pret redus"
+              >
+            </div>
+          </div>
+
+        </section>
+      </fieldset>
+
+      <fieldset class="mb-2">
+        <header>
+          <h2>Brand (optional)</h2>
+        </header>
+
+        <section class="row">
+          <div class="col-12 mb-2">
+            <div class="form-check form-switch">
+              <input
+                type="checkbox"
+                name="brand-enabled"
+                id="brand-enabled"
+                class="form-check-input"
+                checked
+              >
+
+              <label for="brand-enabled">Adauga brand</label>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 mb-2 mb-lg-0">
+            <div class="input-group mb-2">
+              <label
+                for="nume-brand"
+                class="input-group-text"
+              >Nume brand</label>
+
+              <input
+                type="text"
+                name="nume-brand"
+                id="nume-brand"
+                class="form-control"
+                placeholder="Nume brand"
+              >
+            </div>
+
+            <div class="input-group mb-0 mb-lg-2">
+              <label
+                for="brand-description"
+                class="input-group-text"
+              >Descriere brand</label>
+
+              <textarea
+                name="brand-description"
+                id="brand-description"
+                class="form-control"
+                cols="30"
+                rows="4"
+                placeholder="Descriere brand"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 mt-0 mt-lg-0">
+            <div class="input-group">
+              <label
+                for="brand-address"
+                class="input-group-text"
+              >Adresa brand</label>
+
+              <textarea
+                name="brand-address"
+                id="brand-address"
+                class="form-control"
+                cols="30"
+                rows="4"
+                placeholder="Adresa brand"
+                required
+              ></textarea>
+            </div>
+          </div>
+        </section>
+      </fieldset>
+
+      <fieldset>
+        <header>
+          <h2>Furnizor (optional)</h2>
+        </header>
+
+        <section class="row">
+          <div class="col-12 mb-2">
+            <div class="form-check form-switch">
+              <input
+                type="checkbox"
+                name="seller-enabled"
+                id="seller-enabled"
+                class="form-check-input"
+                checked
+              >
+
+              <label for="seller-enabled">Adauga furnizor</label>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 mb-2 mb-lg-0">
+            <div class="input-group mb-2">
+              <label
+                for="nume-seller"
+                class="input-group-text"
+              >Nume furnizor</label>
+
+              <input
+                type="text"
+                name="nume-seller"
+                id="nume-seller"
+                class="form-control"
+                placeholder="Nume furnizor"
+              >
+            </div>
+
+            <div class="input-group mb-0 mb-lg-2">
+              <label
+                for="seller-description"
+                class="input-group-text"
+              >Descriere furnizor</label>
+
+              <textarea
+                name="seller-description"
+                id="seller-description"
+                class="form-control"
+                cols="30"
+                rows="4"
+                placeholder="Descriere furnizor"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 mt-0 mt-lg-0">
+            <div class="input-group">
+              <label
+                for="seller-address"
+                class="input-group-text"
+              >Adresa furnizor</label>
+
+              <textarea
+                name="seller-address"
+                id="seller-address"
+                class="form-control"
+                cols="30"
+                rows="4"
+                placeholder="Adresa furnizor"
+                required
+              ></textarea>
+            </div>
+          </div>
+        </section>
+      </fieldset>
+    </main>
+
+    <footer class="container pb-5">
+      <fieldset class="text-center">
+        <button
+          type="reset"
+          class="btn btn-outline-danger btn-lg"
+          title="Reseteaza tot"
+        >Reseteaza tot</button>
+
+        <button
+          type="submit"
+          title="Salveaza produs"
+          class="btn btn-primary btn-lg"
+        >Salveaza produs</button>
+      </fieldset>
+    </footer>
+  </form>
 
   <div
     class="pixeltab-host"
